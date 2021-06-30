@@ -3,7 +3,7 @@
 * Demo Application Consisting of:
 
   - Terraform IaC for Provisioning the service on Digital Oceans App Platform (https://docs.digitalocean.com/products/app-platform/)
-  - Dockerfile for Python & Flask
+  - Dockerfile for container deployment consisting of a Python3 base-image
   - Auto Deployment (Continous Deployment) enabled on git push to a specific branch; By default this is set to "main"
 
 # Pre-Requisites
