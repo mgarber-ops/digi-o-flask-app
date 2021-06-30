@@ -1,6 +1,8 @@
 variable "github_repo" {}
 
-variable "github_branch" {}
+variable "github_branch" {
+  default = "main"
+}
 
 variable "auto_deploy" {
   default = "true"

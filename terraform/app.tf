@@ -1,23 +1,23 @@
 resource "digitalocean_app" "flask_example" {
   spec {
-    name   = "flask-sample"
-    region = "nyc1"
+    name   = var.app_name
+    region = var.do_region
 
     service {
       name               = "go-service"
       dockerfile_path    = "Dockerfile"
       instance_count     = 1
-      instance_size_slug = "basic-xxs"
+      instance_size_slug = var.droplet_size
 
       github {
-        repo           = "mgarber-ops/digi-o-flask-app"
-        branch         = "main"
-        deploy_on_push = "true"
+        repo           = var.github_repo
+        branch         = var.github_branch
+        deploy_on_push = var.auto_deploy
       }
 
-      http_port = 8080
+      http_port = var.app_tcp_port
       routes {
-        path = "/"
+        path = var.app_route
       }
 
 
