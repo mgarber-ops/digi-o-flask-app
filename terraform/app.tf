@@ -5,21 +5,22 @@ resource "digitalocean_app" "flask_example" {
 
     service {
       name               = "go-service"
-      environment_slug   = "python"
+      dockerfile_path    = "Dockerfile"
       instance_count     = 1
       instance_size_slug = "basic-xxs"
 
       github {
-        repo = "mgarber-ops/digi-o-flask-app"
+        repo           = "mgarber-ops/digi-o-flask-app"
         branch         = "main"
         deploy_on_push = "true"
       }
 
-    http_port = 8080
-    routes {
-    path = "/"
+      http_port = 8080
+      routes {
+        path       = "/"
+        source_dir = "/"
+      }
     }
-    }
-    
+
   }
 }
