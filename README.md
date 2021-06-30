@@ -26,6 +26,8 @@
 
 ``` docker build . ```
 
+``` docker images (copy and paste the latest imageid) ```
+
 ``` docker run -p 8080:8080 <imagesha> ```
 
 # Demo Video
