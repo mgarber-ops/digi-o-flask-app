@@ -17,9 +17,11 @@ resource "digitalocean_app" "flask_example" {
 
       http_port = 8080
       routes {
-        path       = "/"
-        source_dir = "/"
+        path = "/"
       }
+
+
+      source_dir = "/"
     }
 
   }
