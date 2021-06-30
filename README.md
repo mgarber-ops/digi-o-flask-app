@@ -10,7 +10,7 @@
 
 * Digital Ocean Account (I used a $5 pre-pay via paypal)
 * Create a Digital Ocean API Token for the Terraform Provider (export DIGITALOCEAN_TOKEN=xxxxxx)
-* Grant Digital Ocean Permissions to your GitHub Repository: https://github.com/apps/digitalocean/installations/new?state=17ac4ce9dd59fb0cfb9856ba8dc917e2388195b81a56374a6d41e4aa2cc192ca
+* Grant Digital Ocean Permissions to your GitHub Repository: https://cloud.digitalocean.com/apps/github/install (Make sure you've already logged into Digital Ocean)
 * Download & Install Terraform: https://www.terraform.io/downloads.html
 * Docker (Optional for local testing)
 
